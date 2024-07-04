@@ -34,7 +34,8 @@ body .Blum_Container .score_coin_box {
   justify-content: space-between;
   align-items: center;
 }
-body .Blum_Container .score_coin_box .score, body .Blum_Container .score_coin_box .coin {
+body .Blum_Container .score_coin_box .score,
+body .Blum_Container .score_coin_box .coin {
   width: 150px;
   height: auto;
   display: flex;
@@ -46,16 +47,19 @@ body .Blum_Container .score_coin_box .score, body .Blum_Container .score_coin_bo
   border-radius: 40px;
 }
 @media (min-width: 320px) and (max-width: 552px) {
-  body .Blum_Container .score_coin_box .score, body .Blum_Container .score_coin_box .coin {
+  body .Blum_Container .score_coin_box .score,
+  body .Blum_Container .score_coin_box .coin {
     width: 100px;
   }
 }
-body .Blum_Container .score_coin_box .score h1, body .Blum_Container .score_coin_box .coin h1 {
+body .Blum_Container .score_coin_box .score h1,
+body .Blum_Container .score_coin_box .coin h1 {
   color: white;
   font-size: 40px;
 }
 @media (min-width: 320px) and (max-width: 552px) {
-  body .Blum_Container .score_coin_box .score h1, body .Blum_Container .score_coin_box .coin h1 {
+  body .Blum_Container .score_coin_box .score h1,
+  body .Blum_Container .score_coin_box .coin h1 {
     font-size: 18px;
   }
 }
@@ -63,20 +67,33 @@ body .Blum_Container .score_coin_box .score > h1 {
   color: orange;
 }
 body .Blum_Container .leaf {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 128, 0, 0.709);
-  box-shadow: 0 0 20px rgb(0, 255, 0);
-  background-image: url(https://cdn-icons-png.flaticon.com/512/1820/1820351.png);
+  width: 120px;
+  height: 120px;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: -10%;
   border-radius: 50%;
+}
+body .Blum_Container .leaf::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/1820/1820351.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-color: rgba(0, 128, 0, 0.508);
+  box-shadow: 0 0 20px rgb(0, 255, 0);
 }
 @keyframes fall {
+  from {
+    top: -10%;
+  }
   to {
-    transform: translateY(110vh) rotate(360deg);
+    top: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

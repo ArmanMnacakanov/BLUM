@@ -8,7 +8,7 @@ function createLeaf() {
   }
 
   const leaf = document.createElement("div");
-  leaf.className = "leaf";
+  leaf.classList.add('leaf')
   leaf.style.animation = "fall 3s linear infinite";
   leaf.style.left = `${Math.random() * 90}%`;
   document.querySelector(".Blum_Container").appendChild(leaf);
@@ -50,7 +50,7 @@ function startGame() {
 
   const leafCreationIntervalId = setInterval(() => {
     createLeaf();
-  }, 100); // Уменьшаем интервал до 100 миллисекунд
+  }, 300); // Уменьшаем интервал до 100 миллисекунд
 }
 
 startGame();

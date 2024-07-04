@@ -1,17 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
 
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    .Blum_Container{
+
+    .Blum_Container {
         width: 40%;
         height: 100%;
         // background-color: rgb(84, 82, 82);
@@ -25,16 +26,17 @@ body{
 
         @media(min-width:320px) and (max-width:552px) {
             width: 100%;
-        }        
+        }
 
-        .score_coin_box{
+        .score_coin_box {
             width: 100%;
             height: auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .score,.coin{
+            .score,
+            .coin {
                 width: 150px;
                 height: auto;
                 display: flex;
@@ -47,44 +49,61 @@ body{
 
                 @media(min-width:320px) and (max-width:552px) {
                     width: 100px;
-                }        
-        
+                }
 
-                h1{
+
+                h1 {
                     color: white;
                     font-size: 40px;
 
                     @media(min-width:320px) and (max-width:552px) {
                         font-size: 18px;
-                    }        
-            
+                    }
+
                 }
             }
-            .score>h1{
+
+            .score>h1 {
                 color: orange;
             }
 
-           
+
         }
 
-        .leaf{
-            width: 50px;
-            height: 50px;
-            background-color: rgba(0, 128, 0, 0.709);
-            box-shadow:  0 0 20px rgb(0, 255, 0);
-            background-image: url(https://cdn-icons-png.flaticon.com/512/1820/1820351.png);
+        .leaf {
+            width: 120px;
+            height: 120px;
+            // background-color: #008000a6;
             position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             top: -10%;
             border-radius: 50%;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 40%;
+                height: 40%;
+                border-radius: 50%;
+                background-image: url(https://cdn-icons-png.flaticon.com/512/1820/1820351.png);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: rgba(0, 128, 0, 0.508);
+                box-shadow: 0 0 20px rgb(0, 255, 0);
+            }
 
             @keyframes fall {
-                to {
-                  transform:translateY(110vh) rotate(360deg);
+                from {
+                    top: -10%;
                 }
-              }
+
+                to {
+                    top: 100%;
+                }
+            }
         }
     }
 }
