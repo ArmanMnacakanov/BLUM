@@ -1,5 +1,5 @@
 let leafCount = 0;
-const maxLeaves = 40;
+const maxLeaves = 10000;
 const gameDuration = 30; // продолжительность игры в секундах
 
 function createLeaf() {
@@ -50,7 +50,7 @@ function startGame() {
 
   const leafCreationIntervalId = setInterval(() => {
     createLeaf();
-  }, 600); // Увеличиваем интервал до 3 секунд
+  }, 500); // Увеличиваем интервал до 3 секунд
 }
 
 startGame();
