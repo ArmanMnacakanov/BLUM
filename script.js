@@ -50,7 +50,7 @@ function startGame() {
 
   const leafCreationIntervalId = setInterval(() => {
     createLeaf();
-  }, 500); // Увеличиваем интервал до 3 секунд
+  }, 400); // Увеличиваем интервал до 3 секунд
 }
 
 startGame();
