@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Blum_Container{
+        width: 40%;
+        height: 100%;
+        // background-color: rgb(84, 82, 82);
+        background-image: url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        padding: 20px;
+        overflow: hidden;
+
+        @media(min-width:320px) and (max-width:552px) {
+            width: 100%;
+        }        
+
+        .score_coin_box{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .score,.coin{
+                width: 150px;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(0, 0, 0);
+                padding: 10px 40px;
+                border: 2px solid orange;
+                border-radius: 40px;
+
+                @media(min-width:320px) and (max-width:552px) {
+                    width: 100px;
+                }        
+        
+
+                h1{
+                    color: white;
+                    font-size: 40px;
+
+                    @media(min-width:320px) and (max-width:552px) {
+                        font-size: 18px;
+                    }        
+            
+                }
+            }
+            .score>h1{
+                color: orange;
+            }
+
+           
+        }
+
+        .leaf{
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 128, 0, 0.709);
+            box-shadow:  0 0 20px rgb(0, 255, 0);
+            background-image: url(https://cdn-icons-png.flaticon.com/512/1820/1820351.png);
+            position: absolute;
+            top: -10%;
+            border-radius: 50%;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @keyframes fall {
+                to {
+                  transform:translateY(110vh) rotate(360deg);
+                }
+              }
+        }
+    }
+}
