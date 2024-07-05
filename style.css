@@ -6,7 +6,6 @@
 }
 
 body {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +59,7 @@ body .wellcome_box button:active, body .Retry button:active {
 }
 body .Blum_Container {
   width: 40%;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(transparent, transparent, transparent), url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
   display: flex;
   justify-content: center;

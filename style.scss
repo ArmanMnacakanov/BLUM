@@ -6,13 +6,9 @@
 }
 
 body {
-
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
     .wellcome_box,.Retry {
         width: 100%;
         height: 100vh;
@@ -22,6 +18,7 @@ body {
         flex-direction: column;
         gap: 20px;
         position: absolute;
+
         z-index: 99999;
         text-shadow: 1px 1px 1px #919191,
             1px 2px 1px #000000,
@@ -87,7 +84,7 @@ body {
 
     .Blum_Container {
         width: 40%;
-        height: 100%;
+        height: 100vh;
         // background-color: rgb(84, 82, 82);
         background: linear-gradient(transparent, transparent, transparent), url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
         display: flex;
