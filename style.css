@@ -11,16 +11,83 @@ body {
   justify-content: center;
   align-items: center;
 }
+body .wellcome_box, body .Retry {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  z-index: 99999;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #000000, 1px 3px 1px #000000, 1px 4px 1px #000000, 1px 5px 1px #000000, 1px 6px 1px #000000, 1px 7px 1px #000000, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  background-color: rgb(16, 16, 16);
+}
+body .wellcome_box h1, body .Retry h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: capitalize;
+  gap: 15px;
+  color: orangered;
+  font-size: 40px;
+}
+body .wellcome_box h1 span, body .Retry h1 span {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  color: white;
+  font-size: 60px;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #000000, 1px 3px 1px #000000, 1px 4px 1px #000000, 1px 5px 1px #000000, 1px 6px 1px #000000, 1px 7px 1px #000000, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  background-color: rgb(16, 16, 16);
+}
+body .wellcome_box button, body .Retry button {
+  padding: 15px 40px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  background-color: orangered;
+  text-transform: uppercase;
+  font-size: 30px;
+  transition: 0.4s;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.399);
+}
+body .wellcome_box button:active, body .Retry button:active {
+  scale: 0.9;
+}
 body .Blum_Container {
   width: 40%;
   height: 100%;
-  background-image: url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
+  background: linear-gradient(transparent, transparent, transparent), url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   position: relative;
   padding: 20px;
   overflow: hidden;
+}
+@keyframes boom {
+  0% {
+    background: linear-gradient(rgba(255, 0, 0, 0.842), rgba(255, 0, 0, 0.582), rgba(255, 0, 0, 0.314)), url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
+  }
+  20% {
+    background: linear-gradient(transparent, transparent, transparent), url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
+  }
+  40% {
+    background: linear-gradient(rgba(255, 0, 0, 0.502), rgba(255, 0, 0, 0.582), rgba(255, 0, 0, 0.314)), url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
+  }
+  60% {
+    background: linear-gradient(transparent, transparent, transparent), url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
+  }
+  80% {
+    background: linear-gradient(rgba(255, 0, 0, 0.502), rgba(255, 0, 0, 0.582), rgba(255, 0, 0, 0.314)) url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
+  }
+  100% {
+    background: linear-gradient(transparent, transparent, transparent), url(https://oir.mobi/uploads/posts/2021-03/1616577518_20-p-chernii-fon-v-kletku-24.png);
+  }
 }
 @media (min-width: 320px) and (max-width: 552px) {
   body .Blum_Container {
@@ -33,6 +100,7 @@ body .Blum_Container .score_coin_box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 }
 body .Blum_Container .score_coin_box .score,
 body .Blum_Container .score_coin_box .coin {
@@ -66,7 +134,8 @@ body .Blum_Container .score_coin_box .coin h1 {
 body .Blum_Container .score_coin_box .score > h1 {
   color: orange;
 }
-body .Blum_Container .leaf {
+body .Blum_Container .leaf,
+body .Blum_Container .bomb {
   width: 120px;
   height: 120px;
   position: absolute;
@@ -76,7 +145,8 @@ body .Blum_Container .leaf {
   top: -10%;
   border-radius: 50%;
 }
-body .Blum_Container .leaf::before {
+body .Blum_Container .leaf::before,
+body .Blum_Container .bomb::before {
   position: absolute;
   content: "";
   width: 40%;
@@ -96,4 +166,8 @@ body .Blum_Container .leaf::before {
   to {
     top: 100%;
   }
+}
+body .Blum_Container .bomb::before {
+  background-color: rgba(255, 0, 0, 0.502);
+  background-image: url(./bomb-11523975416p3l7kmtyyo-removebg-preview.png);
 }/*# sourceMappingURL=style.css.map */
